@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="867.0" prefWidth="1309.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quanlysieuthimain.HomeController">
+   <items>
+      <SplitPane dividerPositions="0.16985462892119357" prefHeight="760.0" prefWidth="1157.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="808.0" prefWidth="242.0">
+               <children>
+                  <GridPane layoutX="-4.0" layoutY="-4.0" prefHeight="798.0" prefWidth="225.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="120.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="120.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onClickTabHD" prefHeight="35.0" prefWidth="517.0" text="Hóa đơn" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onClickTabPhieu" prefHeight="35.0" prefWidth="149.0" text="Phiếu nhập/ xuất" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onClickTabKH" prefHeight="35.0" prefWidth="151.0" text="Khách hàng" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#Onclick_Btn_Logout" prefHeight="35.0" prefWidth="102.0" text="Logout" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="BTN_QUANLY" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#onClick_Admin" prefHeight="35.0" prefWidth="152.0" text="Quản lý" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Label fx:id="Util_LB_INFO" prefHeight="17.0" prefWidth="97.0" text="THÔNG TIN" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding></Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="862.0" prefWidth="1016.0">
+               <children>
+                  <TabPane fx:id="TP_HD" layoutX="-8.0" prefHeight="865.0" prefWidth="1090.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Tạo hóa đơn">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="839.0" prefWidth="1065.0">
+                                 <children>
+                                    <TableView fx:id="THD_TV_ChitietHD" layoutX="281.0" layoutY="59.0" prefHeight="378.0" prefWidth="789.0">
+                                      <columns>
+                                        <TableColumn fx:id="THD_Col_IDsp" prefWidth="87.0" text="Mã sản phẩm" />
+                                        <TableColumn fx:id="THD_Col_TenSP" prefWidth="214.0" text="Tên sản phẩm" />
+                                          <TableColumn fx:id="THD_Col_Sl" prefWidth="74.0" text="Số lượng" />
+                                          <TableColumn fx:id="THD_Col_Donvitinh" prefWidth="129.0" text="Đơn vị tính" />
+                                          <TableColumn fx:id="THD_Col_Dongia" prefWidth="117.0" text="Đơn giá" />
+                                          <TableColumn fx:id="THD_Col_Tongdongia" prefWidth="167.0" text="Tổng đơn giá" />
+                                      </columns>
+                                    </TableView>
+                                    <ComboBox fx:id="THD_CbB_TenSP" layoutX="113.0" layoutY="179.0" prefWidth="150.0" />
+                                    <Label layoutX="14.0" layoutY="116.0" text="Loại sản phẩm:" />
+                                    <Label layoutX="16.0" layoutY="183.0" text="Tên sản phẩm:" />
+                                    <Spinner fx:id="THD_Spn_SL" editable="true" layoutX="114.0" layoutY="234.0" />
+                                    <Button layoutX="111.0" layoutY="287.0" mnemonicParsing="false" onAction="#onClickThemSPvaoHD" prefHeight="44.0" prefWidth="154.0" text="Thêm" />
+                                    <Button layoutX="516.0" layoutY="653.0" mnemonicParsing="false" onAction="#onClickThanhtoan" prefHeight="50.0" prefWidth="165.0" text="Thanh toán" />
+                                    <TextField fx:id="THD_TF_SDTKH" layoutX="498.0" layoutY="549.0" prefHeight="25.0" prefWidth="225.0" />
+                                    <Label layoutX="383.0" layoutY="544.0" prefHeight="35.0" prefWidth="102.0" text="SDT khách hàng:" />
+                                    <Label layoutX="383.0" layoutY="454.0" text="Tổng tiền:" />
+                                    <TextField fx:id="THD_TF_Tongtien" disable="true" layoutX="498.0" layoutY="450.0" prefHeight="25.0" prefWidth="222.0" />
+                                    <Label layoutX="383.0" layoutY="503.0" text="Mã giảm:" />
+                                    <ComboBox fx:id="THD_CbB_LoaiSP" layoutX="113.0" layoutY="112.0" onAction="#onClickselectValueLoai" prefWidth="150.0" />
+                                    <ComboBox fx:id="THD_CbB_Magiam" layoutX="498.0" layoutY="499.0" prefHeight="25.0" prefWidth="219.0" />
+                                    <RadioButton layoutX="464.0" layoutY="595.0" mnemonicParsing="false" selected="true" text="Tiền mặt">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="PTTT" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton layoutX="586.0" layoutY="595.0" mnemonicParsing="false" text="Chuyển khoản" toggleGroup="$PTTT" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Quản lý hóa đơn">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="807.0" prefWidth="1046.0">
+                                 <children>
+                                    <TableView fx:id="QLHD_TV_HD" layoutX="14.0" layoutY="154.0" prefHeight="643.0" prefWidth="660.0">
+                                      <columns>
+                                        <TableColumn fx:id="QLHD_Col_IDHD" prefWidth="48.0" text="Mã HD" />
+                                        <TableColumn fx:id="QLHD_Col_IDNS" prefWidth="76.0" text="Mã Nhân sự" />
+                                          <TableColumn fx:id="QLHD_Col_IDKH" prefWidth="53.0" text="Mã KH" />
+                                          <TableColumn fx:id="QLHD_Col_IDMagiam" prefWidth="62.0" text="Mã giảm" />
+                                          <TableColumn fx:id="QLHD_Col_Thanhtoan" prefWidth="89.0" text="Thanh toán" />
+                                          <TableColumn fx:id="QLHD_Col_Ngay" prefWidth="103.0" text="Ngày lập" />
+                                          <TableColumn fx:id="QLHD_Col_Tongtien" prefWidth="94.0" text="Tổng tiền" />
+                                          <TableColumn fx:id="QLHD_Col_Thanhtien" prefWidth="150.0" text="Thành tiền" />
+                                      </columns>
+                                    </TableView>
+                                    <TableView fx:id="QLHD_TV_CTHD" layoutX="685.0" layoutY="154.0" prefHeight="643.0" prefWidth="399.0">
+                                      <columns>
+                                        <TableColumn fx:id="QLHD_Col_IDSP" prefWidth="57.0" text="Mã SP" />
+                                        <TableColumn fx:id="QLHD_Col_TenSP" prefWidth="158.0" text="Tên SP" />
+                                          <TableColumn fx:id="QLHD_Col_Sluong" prefWidth="57.0" text="SLuong" />
+                                          <TableColumn fx:id="QLHD_Col_Tongdongia" prefWidth="134.0" text="Tổng đơn giá" />
+                                      </columns>
+                                    </TableView>
+                                    <Label layoutX="176.0" layoutY="123.0" text="Hóa đơn" />
+                                    <Label layoutX="822.0" layoutY="123.0" text="Chi tiết hóa đơn" />
+                                    <Label layoutX="52.0" layoutY="93.0" text="Tìm HD:" />
+                                    <Label layoutX="52.0" layoutY="46.0" text="Lọc theo ngày từ:" />
+                                    <DatePicker fx:id="QLHD_DP_Tungay" layoutX="144.0" layoutY="42.0" />
+                                    <DatePicker fx:id="QLHD_DP_Denngay" layoutX="359.0" layoutY="42.0" />
+                                    <Label layoutX="326.0" layoutY="46.0" text="Đến" />
+                                    <Button layoutX="575.0" layoutY="42.0" mnemonicParsing="false" onAction="#onClick_Btn_LocHD" text="Lọc" />
+                                    <Button layoutX="562.0" layoutY="89.0" mnemonicParsing="false" onAction="#onClick_Btn_LammoiHD" text="Làm mới" />
+                                    <TextField fx:id="QLHD_TF_TimHD" layoutX="144.0" layoutY="89.0" onKeyPressed="#QLHD_TimHD" />
+                                    <Label layoutX="671.0" layoutY="55.0" text="Doanh thu:" />
+                                    <TextField fx:id="QLHD_TF_Doanhthu" disable="true" layoutX="748.0" layoutY="51.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                  <TabPane fx:id="TP_KH" prefHeight="865.0" prefWidth="1082.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+                     <tabs>
+                        <Tab text="Khách hàng">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="KH_TV_DsachKH" layoutX="337.0" layoutY="23.0" prefHeight="759.0" prefWidth="698.0">
+                                      <columns>
+                                        <TableColumn fx:id="KH_Col_IDKH" prefWidth="55.0" text="Mã KH" />
+                                        <TableColumn fx:id="KH_Col_TenKH" prefWidth="224.0" text="Tên KH" />
+                                          <TableColumn fx:id="KH_Col_SDT" prefWidth="164.0" text="SDT" />
+                                          <TableColumn fx:id="KH_Col_Tichluy" prefWidth="174.0" text="Tích Lũy" />
+                                      </columns>
+                                    </TableView>
+                                    <Label layoutX="27.0" layoutY="198.0" text="Tên Khách hàng:" />
+                                    <Label layoutX="28.0" layoutY="251.0" prefHeight="28.0" prefWidth="86.0" text="SDT:" />
+                                    <TextField fx:id="KH_TF_Ten" layoutX="135.0" layoutY="194.0" prefHeight="25.0" prefWidth="163.0" />
+                                    <TextField fx:id="KH_TF_SDT" layoutX="135.0" layoutY="253.0" prefHeight="25.0" prefWidth="162.0" />
+                                    <Button layoutX="135.0" layoutY="336.0" mnemonicParsing="false" onAction="#Onclick_Btn_ThemKH" text="Thêm" />
+                                    <Button layoutX="234.0" layoutY="336.0" mnemonicParsing="false" onAction="#Onclick_Btn_CapnhatKH" text="Cập nhật" />
+                                    <Label layoutX="28.0" layoutY="144.0" text="Tìm:" />
+                                    <TextField fx:id="KH_TF_TimKH" layoutX="135.0" layoutY="140.0" onKeyPressed="#KH_TimKH" prefHeight="25.0" prefWidth="162.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <TabPane fx:id="TP_PhieuNX" prefHeight="865.0" prefWidth="1082.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+                     <tabs>
+                        <Tab text="Tạo phiếu nhập/xuất">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="TPNX_TV_TaoPhieu" layoutX="615.0" layoutY="203.0" prefHeight="376.0" prefWidth="453.0">
+                                      <columns>
+                                        <TableColumn fx:id="TPNX_Col_TaoPhieuTenSP" prefWidth="270.0" text="Tên sản phẩm" />
+                                        <TableColumn fx:id="TPNX_Col_TaoPhieuSluong" minWidth="3.0" prefWidth="67.0" text="Số lượng" />
+                                          <TableColumn fx:id="TPNX_Col_TaoPhieuGia" prefWidth="115.0" text="Tổng đơn giá" />
+                                      </columns>
+                                    </TableView>
+                                    <ComboBox fx:id="TPNX_CbB_LoaiSP" layoutX="765.0" layoutY="35.0" onAction="#onSelectedLoai_TPNX" prefWidth="150.0" />
+                                    <ComboBox fx:id="TPNX_CbB_TenSP" layoutX="765.0" layoutY="78.0" prefWidth="150.0" />
+                                    <Label layoutX="627.0" layoutY="42.0" text="Loại Sản phẩm:" />
+                                    <Label layoutX="627.0" layoutY="82.0" text="Tên Sản phẩm:" />
+                                    <TableView fx:id="TPNX_TV_DsachSP" layoutX="14.0" layoutY="52.0" prefHeight="770.0" prefWidth="587.0">
+                                      <columns>
+                                        <TableColumn fx:id="TPNX_Col_IDSP" prefWidth="81.0" text="Mã sản phẩm" />
+                                        <TableColumn fx:id="TPNX_Col_TENSP" prefWidth="219.0" text="Tên sản phẩm" />
+                                          <TableColumn fx:id="TPNX_Col_GIA" prefWidth="104.0" text="Giá đáng bán" />
+                                          <TableColumn fx:id="TPNX_Col_Sluong" prefWidth="62.0" text="Số lượng" />
+                                          <TableColumn fx:id="TPNX_Col_Trangthai" prefWidth="118.0" text="Hoạt động" />
+                                      </columns>
+                                    </TableView>
+                                    <Label layoutX="626.0" layoutY="120.0" prefHeight="17.0" prefWidth="84.0" text="Số lượng:" />
+                                    <Label layoutX="627.0" layoutY="154.0" text="Giá:" />
+                                    <Spinner fx:id="TPNX_Spn_Sluong" editable="true" layoutX="766.0" layoutY="116.0" />
+                                    <TextField fx:id="TPNX_TF_Gia" layoutX="766.0" layoutY="150.0" />
+                                    <Button layoutX="982.0" layoutY="91.0" mnemonicParsing="false" onAction="#onClick_Btn_themSPvaoPhieu" text="Thêm" />
+                                    <RadioButton fx:id="TPNX_RdB_Nhap" layoutX="708.0" layoutY="607.0" mnemonicParsing="false" selected="true" text="Phiếu nhập">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Phieu" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="TPNX_RdB_Xuat" layoutX="841.0" layoutY="607.0" mnemonicParsing="false" text="Phiếu xuất" toggleGroup="$Phieu" />
+                                    <Button layoutX="768.0" layoutY="678.0" mnemonicParsing="false" onAction="#onClick_Btn_TaoPhieu" prefHeight="48.0" prefWidth="99.0" text="Tạo phiếu" />
+                                    <Label layoutX="25.0" layoutY="27.0" text="Tìm Sản phẩm:" />
+                                    <TextField fx:id="TPNX_TF_TimSP" layoutX="118.0" layoutY="23.0" onKeyPressed="#TPNX_TimSP" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Danh sách phiếu nhập">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="DSPN_TV_PN" layoutX="33.0" layoutY="115.0" prefHeight="704.0" prefWidth="494.0">
+                                      <columns>
+                                        <TableColumn fx:id="DSPN_Col_IDphieu" prefWidth="104.0" text="Mã phiếu nhập" />
+                                        <TableColumn fx:id="DSPN_Col_IDNhansu" prefWidth="91.0" text="Mã nhân sự" />
+                                          <TableColumn fx:id="DSPN_Col_Ngay" prefWidth="152.0" text="Ngày nhập" />
+                                          <TableColumn fx:id="DSPN_Col_TongChi" prefWidth="146.0" text="Tổng Chi" />
+                                      </columns>
+                                    </TableView>
+                                    <TableView fx:id="DSPN_TV_CCPN" layoutX="551.0" layoutY="118.0" prefHeight="699.0" prefWidth="500.0">
+                                      <columns>
+                                        <TableColumn fx:id="DSPN_Col_IDsp" prefWidth="75.0" text="Mã SP" />
+                                        <TableColumn fx:id="DSPN_Col_TenSP" prefWidth="231.0" text="Tên sản phẩm" />
+                                          <TableColumn fx:id="DSPN_Col_Sluong" prefWidth="70.0" text="Số lượng" />
+                                          <TableColumn fx:id="DSPN_Col_Tongdongia" prefWidth="123.0" text="Tổng đơn giá nhập" />
+                                      </columns>
+                                    </TableView>
+                                    <Label layoutX="801.0" layoutY="31.0" text="Tổng chi:" />
+                                    <TextField fx:id="DSPN_TF_Tongchi" layoutX="875.0" layoutY="27.0" />
+                                    <Label layoutX="40.0" layoutY="23.0" text="Lọc từ ngày:" />
+                                    <Label layoutX="278.0" layoutY="23.0" text="đến ngày:" />
+                                    <Label layoutX="40.0" layoutY="60.0" text="Tìm:" />
+                                    <TextField fx:id="DSPN_TF_TimPN" accessibleRole="DATE_PICKER" layoutX="118.0" layoutY="56.0" onKeyPressed="#DSPN_TimPN" />
+                                    <Button layoutX="515.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClick_Btn_LocPhieuNhap" text="Lọc" />
+                                    <Button layoutX="507.0" layoutY="65.0" mnemonicParsing="false" onAction="#onClick_Btn_LammoiPhieuNhap" text="Làm mới" />
+                                    <DatePicker fx:id="DSPN_DP_tungay" layoutX="118.0" layoutY="19.0" prefHeight="25.0" prefWidth="156.0" />
+                                    <DatePicker fx:id="DSPN_DP_denngay" layoutX="339.0" layoutY="19.0" prefHeight="25.0" prefWidth="156.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Danh sách phiếu xuất">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="DSPX_TV_PX" layoutX="33.0" layoutY="115.0" prefHeight="704.0" prefWidth="494.0">
+                                       <columns>
+                                          <TableColumn fx:id="DSPX_Col_IDphieu" prefWidth="104.0" text="Mã phiếu xuất" />
+                                          <TableColumn fx:id="DSPX_Col_IDNhansu" prefWidth="91.0" text="Mã nhân sự" />
+                                          <TableColumn fx:id="DSPX_Col_Ngay" prefWidth="152.0" text="Ngày xuất" />
+                                          <TableColumn fx:id="DSPX_Col_TongThu" prefWidth="146.0" text="Tổng Thu" />
+                                       </columns>
+                                    </TableView>
+                                    <TableView fx:id="DSPX_TV_CTPX" layoutX="551.0" layoutY="118.0" prefHeight="699.0" prefWidth="500.0">
+                                       <columns>
+                                          <TableColumn fx:id="DSPX_Col_IDsp" prefWidth="75.0" text="Mã SP" />
+                                          <TableColumn fx:id="DSPX_Col_TenSP" prefWidth="231.0" text="Tên sản phẩm" />
+                                          <TableColumn fx:id="DSPX_Col_Sluong" prefWidth="70.0" text="Số lượng" />
+                                          <TableColumn fx:id="DSPX_Col_Tongdongia" prefWidth="123.0" text="Tổng đơn giá xuất" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="801.0" layoutY="31.0" text="Tổng chi:" />
+                                    <TextField fx:id="DSPX_TF_TongThu" layoutX="875.0" layoutY="27.0" />
+                                    <Label layoutX="40.0" layoutY="23.0" text="Lọc từ ngày:" />
+                                    <Label layoutX="278.0" layoutY="23.0" text="đến ngày:" />
+                                    <Label layoutX="40.0" layoutY="60.0" text="Tìm:" />
+                                    <TextField fx:id="DSPX_TF_TimPX" accessibleRole="DATE_PICKER" layoutX="118.0" layoutY="56.0" onKeyPressed="#DSPX_TimPX" />
+                                    <Button layoutX="515.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClick_Btn_LocPhieuXuat" text="Lọc" />
+                                    <Button layoutX="507.0" layoutY="65.0" mnemonicParsing="false" onAction="#onClick_Btn_LammoiPhieuXuat" text="Làm mới" />
+                                    <DatePicker fx:id="DSPX_DP_tungay" layoutX="118.0" layoutY="19.0" prefHeight="25.0" prefWidth="156.0" />
+                                    <DatePicker fx:id="DSPX_DP_denngay" layoutX="339.0" layoutY="19.0" prefHeight="25.0" prefWidth="156.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </items>
+</SplitPane>
